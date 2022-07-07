@@ -87,9 +87,17 @@ a {
   text-decoration: none;
 }
 
+section {
+  margin: 3rem 0;
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
 }
 /* More classes */
+
+.no-scroll {
+  overflow: hidden;
+}

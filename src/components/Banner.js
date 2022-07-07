@@ -22,14 +22,13 @@ const Banner = () => {
 };
 
 const Wrapper = styled.section`
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 8rem);
   padding: 2rem 0;
   display: flex;
   align-items: center;
   .banner-center {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   .banner-info {
     order: 1;

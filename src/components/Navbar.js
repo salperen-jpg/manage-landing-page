@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../Assets/images/logo.svg';
 import hambuger from '../Assets/images/icon-hamburger.svg';
+import close from '../Assets/images/icon-close.svg';
 import navlinks from '../utils/links';
+import { AppContext } from '../context';
 import styled from 'styled-components';
 const Navbar = () => {
+  const { isSidebarOpen, toggleSidebar } = useContext(AppContext);
+
+  React.useEffect(() => {
+    document.documentElement.classList.toggle('no-scroll');
+  }, [isSidebarOpen]);
+
   return (
     <Wrapper>
       <div className='nav-center'>
         <div className='nav-header'>
           <img src={logo} className='logo' alt='manage' />
-          <button type='button' className='btn toggle-btn'>
-            <img src={hambuger} alt='' />
+          <button
+            type='button'
+            className='btn toggle-btn'
+            onClick={toggleSidebar}
+          >
+            {isSidebarOpen ? (
+              <img src={close} alt='' />
+            ) : (
+              <img src={hambuger} alt='' />
+            )}
           </button>
         </div>
         <ul className='nav-links'>
@@ -30,7 +46,7 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.nav`
-  height: 6rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   .nav-center {
@@ -44,6 +60,8 @@ const Wrapper = styled.nav`
   }
   .toggle-btn {
     background-color: transparent;
+    position: static;
+    z-index: 999;
   }
   .nav-links {
     display: none;
