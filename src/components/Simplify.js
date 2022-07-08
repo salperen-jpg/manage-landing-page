@@ -22,6 +22,7 @@ const Wrapper = styled.section`
   color: white;
   position: relative;
   z-index: 5;
+  margin-bottom: 0;
   .simplify-center {
     text-align: center;
     h2 {
