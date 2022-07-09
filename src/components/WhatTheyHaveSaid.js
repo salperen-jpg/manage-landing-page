@@ -13,6 +13,7 @@ const WhatTheyHaveSaid = () => {
           })}
         </div>
       </div>
+      <button className='btn centered-btn'>get started</button>
     </Wrapper>
   );
 };
@@ -26,6 +27,11 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-column-gap: 3rem;
+  }
+  .centered-btn {
+    margin: 0 auto;
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
   }
 `;
 

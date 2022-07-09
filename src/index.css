@@ -48,6 +48,9 @@ body {
   cursor: pointer;
   border: transparent;
 }
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 h1 {
   font-size: 3rem;

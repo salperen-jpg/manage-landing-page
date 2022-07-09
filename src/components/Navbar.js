@@ -83,6 +83,11 @@ const Wrapper = styled.nav`
         text-transform: capitalize;
         color: var(--clr-dark-Blue);
         font-weight: 500;
+        cursor: pointer;
+      }
+      .nav-link:hover {
+        color: var(--clr-Very-Dark-Blue);
+        font-weight: 700;
       }
     }
     .nav-btn {

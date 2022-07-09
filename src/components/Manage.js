@@ -81,7 +81,7 @@ const Wrapper = styled.section`
       margin-left: 1rem;
       color: var(--clr-dark-Blue);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
   @media (min-width: 992px) {
